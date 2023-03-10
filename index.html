@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js" ></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+        var PRef = {
+            color:"red"
+        }
+      var image =
+        "https://media.istockphoto.com/id/1364004761/photo/professional-black-female-it-engineer-working-on-desktop-on-laptop-computer-successful.jpg?s=612x612&w=0&k=20&c=-87J2-wggz0vbBMAfTFHgU24MuyojYZ9YG-ofIqEa0w=";
+      let divRef = React.createElement("div", { style: { display: "flex" ,justifyContent:"center"} }, 
+        React.createElement(
+          "div",
+          {
+            style: {
+            width:"300px",
+            textAlign:"center",
+            padding:"20px",
+            marginLeft:"30px",
+            boxShadow:"0px 0px 10px black"
+            },
+          },
+          React.createElement(
+            "img",
+            { src: image, height: "100px", width: "100px" ,style:{borderRadius:"50%"}},
+            null
+          ),
+          React.createElement("h2", null, "Shivam Kumar"),
+          React.createElement("p", null, "Software developer"),
+          React.createElement('div',{ style: { display:"flex" ,textAlign:"center", justifyContent:"space-around" } },[
+          React.createElement('p',{ style: { color: "Red",textAlign:"center"} },"Post"),
+          React.createElement('p',{ style: { color: "Red" ,textAlign:"center",marginLeft:"20px"} },"Followers"),
+          React.createElement('p',{ style: { color: "Red" ,textAlign:"center"} },"Following"),
+          ]),
+          React.createElement('div',{ style: { display:"flex" ,textAlign:"center",marginTop:"-50px",marginLeft:"-15px", justifyContent:"space-around"} },[
+          React.createElement('span',{ style: { color: "blue" ,marginTop:"40px",textAlign:"center"} },"200"),
+          React.createElement('span',{ style: { color: "blue",marginTop:"40px",textAlign:"center" } },"2000"),
+          React.createElement('span',{ style: { color: "blue",marginTop:"40px" ,textAlign:"center"} },"240")
+          ]),
+          React.createElement('button',{style:{backgroundColor:"red",borderRadius:"5px",padding:"6px",width:"90px",marginRight:"5px",marginTop:"20px",border:"none",color:"white"}},"Follow"),
+          React.createElement('button',{style:{backgroundColor:"red",borderRadius:"5px",padding:"6px",width:"90px",marginLeft:"5px",marginTop:"20px",border:"none",color:"white"}},"Message")
+        ));
+      ReactDOM.render(divRef, document.getElementById("root"));
+    </script>
+  </body>
+</html>
